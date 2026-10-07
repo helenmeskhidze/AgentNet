@@ -1,7 +1,10 @@
 from numpy import random
-from setup import LANDSCAPE, starting_pos, TEAM_SIZE
+from setup import LANDSCAPE, LANDSCAPE_LENGTH, TEAM_SIZE
 from climb import climb
 from SoloAgent import run_solo
+
+# reset the starting position (else trivial)
+starting_pos = random.randint(LANDSCAPE_LENGTH)
 
 def run_team(team):
     pos = int(starting_pos)
